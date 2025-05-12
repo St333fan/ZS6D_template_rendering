@@ -43,15 +43,17 @@ pt-get update && apt-get install -y \
 git clone https://github.com/thodan/bop_toolkit.git
 pip install --upgrade pip setuptools
 pip install .
-# vielleicth nur das
+
+# vielleicht nur das
 export C_INCLUDE_PATH=/usr/include/python3.10
 /root/blender/blender-3.3.1-linux-x64/3.3/python/bin/python3.10 -m pip install /home/bop_toolkit
 
-wget https://files.pythonhosted.org/packages/6a/03/6c0bf810a5df7876caaf11f5b113e7ffd4b2fa9767d360489c6fdcefe8e5/pycocotools-2.0.8-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
-/root/blender/blender-3.3.1-linux-x64/3.3/python/bin/python3.10 -m pip install pycocotools-2.0.8-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
-export C_INCLUDE_PATH=/usr/include/python3.10
-/root/blender/blender-3.3.1-linux-x64/3.3/python/bin/python3.10 -m pip install /home/bop_toolkit
-/root/blender/blender-3.3.1-linux-x64/3.3/python/bin/python3.10 -m pip install numpy==1.23
+apt-get install libopenexr-dev
+/root/blender/blender-3.3.1-linux-x64/3.3/python/bin/python3.10 -m pip install --upgrade --no-cache-dir --force-reinstall opencv-python
+/root/blender/blender-3.3.1-linux-x64/3.3/python/bin/python3.10 -m pip install --upgrade "numpy<2.0.0"
+
+/root/blender/blender-3.3.1-linux-x64/3.3/python/bin/python3.10 -m pip uninstall opencv-python opencv-contrib-python -y
+/root/blender/blender-3.3.1-linux-x64/3.3/python/bin/python3.10 -m pip install --no-binary opencv-python "numpy<2.0.0" opencv-python
 ```
 
 ### Rendering with bop datasets
