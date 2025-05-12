@@ -16,6 +16,16 @@
 
 ```blenderproc run render_bop_templates.py bop_templates_cfg.yaml```
 
+4. Problems
+
+```
+conda install gcc_linux-64 gxx_linux-64  # For Linux
+git clon
+
+```
+
+
+
 ### Rendering with custom mesh files (ply/obj)
 
 2. set up the config file (mesh files are expected to be in mm)
